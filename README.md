@@ -22,8 +22,7 @@ Dependencies in python2:
 <pre>
   requests
   xlsxwriter
-  
- </pre>
+</pre>
   
 # Author
 
