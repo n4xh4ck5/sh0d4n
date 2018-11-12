@@ -15,6 +15,8 @@ Install the dependencies via pip:
  
  python sh0d4n.py <IP>
   
+ You need update your own API KEY in the parameter "API".
+  
 # Dependencies
 
 Dependencies in python2:
