@@ -50,13 +50,16 @@ def export_results (targets,ports):
 		print "Error in export_results" + str(e)
 
 def manage_response (data):
+	ports = None
+	ip = None
 	try:
-
-		ports = str(data['ports']).replace("[","").replace("]","")
+		ip = str(data['ip_str'])
 		print "\n[*]Target: " + str(data['ip_str'])
+		ports = str(data['ports']).replace("[","").replace("]","")
 		print "Ports:"+ str(ports)
-	except Exception as e:
-		print "Error in manage_response" + str(e)
+	except:
+		print "Not found information of the IP"
+		ports = "-"
 
 	finally:
 		return ports
@@ -119,12 +122,13 @@ def main(argv):
 	array = read_input(target) 
 	try:
 		for ip in array:
+			print ip
 			url = "https://api.shodan.io/shodan/host/"+ip+"?key="+API
 			#Sent request
 			r = send_request(url)
 			# Manage the response
 			port = manage_response(r)
-			ports.append(port)
+			ports.append(str(port))
 
 		#Export results		
 		export_results(array,ports)
