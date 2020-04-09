@@ -3,7 +3,7 @@ Tool to obtain information about the open ports throught API's Shodan
 
 # Instalation
 
-You can download the latest version of CMSsc4n by cloning the GitHub repository:
+You can download the latest version of Sh0d4n by cloning the GitHub repository:
 
 <pre>git clone https://github.com/n4xh4ck5/sh0d4n </pre>
 
